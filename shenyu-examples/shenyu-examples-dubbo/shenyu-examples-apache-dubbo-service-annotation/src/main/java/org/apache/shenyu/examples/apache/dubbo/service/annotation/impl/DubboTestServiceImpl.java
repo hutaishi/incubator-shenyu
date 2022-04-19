@@ -41,6 +41,11 @@ public class DubboTestServiceImpl implements DubboTestService {
     @ShenyuDubboClient(path = "/findById", desc = "Query by Id")
     public DubboTest findById(final String id) {
         LOGGER.info(GsonUtils.getInstance().toJson(RpcContext.getContext().getAttachments()));
+        try {
+            Thread.sleep(100);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return new DubboTest(id, "hello world shenyu Apache, findById");
     }
     

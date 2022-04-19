@@ -14,7 +14,7 @@
 # limitations under the License.
 
 server:
-  port: 8011
+  port: 8021
   address: 0.0.0.0
   servlet:
     context-path: /
@@ -32,8 +32,8 @@ shenyu:
   client:
     dubbo:
       props:
-        contextPath: /dubbo
-        appName: dubbo
+        contextPath: /alibaba-dubbo
+        appName: alibaba-dubbo
 
 dubbo:
   application:
@@ -43,5 +43,5 @@ dubbo:
     address: 127.0.0.1:2181
   protocol:
     name: dubbo
-    port: 20888
+    port: 20898
 
